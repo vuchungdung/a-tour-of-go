@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func fibonacci() func() int {
+func Fibonacci() func() int {
 	prevNum := 0
 	prevPrevNum := 0
 	return func() int {

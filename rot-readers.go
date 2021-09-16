@@ -6,11 +6,11 @@ import (
 	"strings"
 )
 
-type rot13Reader struct {
+type Rot13Reader struct {
 	r io.Reader
 }
 
-func (rot rot13Reader) Read(b []byte) (n int, err error) {
+func (rot Rot13Reader) Read(b []byte) (n int, err error) {
 	n, err = rot.r.Read(b)
 	for i := 0; i < len(b); i++ {
 		if (b[i] >= 'A' && b[i] < 'N') || (b[i] >= 'a' && b[i] < 'n') {
